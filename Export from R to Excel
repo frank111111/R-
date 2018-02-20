@@ -1,0 +1,5 @@
+Because this computer the java setting is not good, then we can’t use RJava to load XLSX package to import, 
+therefore, we could only export the data as csv file and separate as “,” which to going to be space in excel. 
+
+write.table(ppffd,file="wo.csv",sep = ",")
+
