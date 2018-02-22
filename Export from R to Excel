@@ -3,9 +3,13 @@ therefore, we could only export the data as csv file and separate as “,” whi
 
 write.table(ppffd,file="wo.csv",sep = ",")
 
+#######################################################################################
 
+读入excel 主要是两个包：readxl, XLConnect
 
 library(readxl)
 excel_sheets("correl.xlsx")  用来看excel 里面每一个sheet 的名字
 data <- read_excel("data.xlsx", sheet = "my_sheet") 用来import excel 到R中， sheet = 也可以用 sheet=1 来表示第一个sheet
 my_workbook <- lapply(excel_sheets("data.xlsx"), read_excel, path = "data.xlsx") 用来读取excel 中每一个sheet，最后是一个lsit 里面有每一个sheet
+read_excel 指令还可以加入 skip 来跳过其中几行
+
