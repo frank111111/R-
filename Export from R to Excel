@@ -20,5 +20,6 @@ readWorksheet(my_book,sheet=2)           用来import excel 到R中， sheet = �
 urbanpop_sel <- readWorksheet(my_book, sheet = 2,startCol=3,endCol=5) 用 startCol, endCol 来设定起始coloun 和结束coloun. 
 createSheet(my_book,"data_summary")      用来在workbook里创建一个worksheet
 writeWorksheet(my_book,summ,"data_summary") 在指定的worksheet （这里是“data_summary”这个worksheet） 里加入写好的东西（summ 是一个已经编辑好的varibale，可以是table，list）
+renameSheet(my_book,sheet=4,"summary")    从新命名一个sheet(sheet4), 为 "summary"
 saveWorkbook(my_book,"summary.xlsx")     保存workbook，并从新命名为 summary.xlsx
 
