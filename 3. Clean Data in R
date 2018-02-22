@@ -1,1 +1,14 @@
-
+1. check data
+  class()
+  dim()
+  str()
+  summary()
+  names()
+  library(dplry)  glimpse()
+ 
+2. visualize data
+  hist()   这个command 里只接受 vectors, 如果是datatable 要注意用slicer 选出自己需要的coloumn
+  plot()
+  
+3. tidyr 是一个可以让data 变得clean 的一个package
+  
