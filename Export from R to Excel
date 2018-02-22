@@ -18,5 +18,6 @@ my_book <- loadWorkbook("urbanpop.xlsx") 设立连接
 getSheets(my_book)                       用来看excel 里面每一个sheet 的名字
 readWorksheet(my_book,sheet=2)           用来import excel 到R中， sheet = 也可以用 sheet=1 来表示第一个sheet
 urbanpop_sel <- readWorksheet(my_book, sheet = 2,startCol=3,endCol=5) 用 startCol, endCol 来设定起始coloun 和结束coloun. 
-
+createSheet(my_book,"data_summary")      用来在workbook里创建一个worksheet
+writeWorksheet(my_book,summ,"data_summary") 在指定的worksheet （这里是“data_summary”这个worksheet） 里加入写好的东西（summ 是一个已经编辑好的varibale，可以是table，list）
 
