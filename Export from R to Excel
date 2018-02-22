@@ -13,3 +13,10 @@ data <- read_excel("data.xlsx", sheet = "my_sheet") 用来import excel 到R中�
 my_workbook <- lapply(excel_sheets("data.xlsx"), read_excel, path = "data.xlsx") 用来读取excel 中每一个sheet，最后是一个lsit 里面有每一个sheet
 read_excel 指令还可以加入 skip 来跳过其中几行
 
+library(XLConnect)
+my_book <- loadWorkbook("urbanpop.xlsx") 设立连接
+getSheets(my_book)                       用来看excel 里面每一个sheet 的名字
+readWorksheet(my_book,sheet=2)           用来import excel 到R中， sheet = 也可以用 sheet=1 来表示第一个sheet
+urbanpop_sel <- readWorksheet(my_book, sheet = 2,startCol=3,endCol=5) 用 startCol, endCol 来设定起始coloun 和结束coloun. 
+
+
