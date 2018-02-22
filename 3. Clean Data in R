@@ -13,4 +13,14 @@
 3. tidyr 是一个可以让data 变得clean 的一个package
   gather(datatable, key coloumn name, value coloumn name, coloumns that need to combine) 这个指令是把不是varibale 的coloumn 全部合并成一个varibale coloumn. 
                                                                                           被合并成的coloumn name 就是第三个-key coloumn name. 被合并的原来的 value 跑到了了value coloumns name
-                                                                                          
+  spread(datatable,my_key, my_val)                        这个指令和gather 相反.如下图, 通过把左边的图变成右边的
+                                                          
+                                                              col my_key my_val                               col A B C
+                                                            1   X      A      1                             1   X 1 2 3
+                                                            2   Y      A      4                             2   Y 4 5 6
+                                                            3   X      B      2
+                                                            4   Y      B      5
+                                                            5   X      C      3
+                                                            6   Y      C      6
+                                                            
+                                                            
