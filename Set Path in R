@@ -1,0 +1,2 @@
+dir() 可以看现在R 的path 是设置在哪里
+file.path("data", "hotdogs.txt") 这个指令是指，在已经弄好的path 里，有一个文件data. 文件data 里面，有一个txt 叫hotdogs
