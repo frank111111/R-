@@ -24,3 +24,6 @@
                                                             6   Y      C      6
                                                             
                                                             
+  separate(bmi_cc, col = Country_ISO, into = c("Country", "ISO"), sep = "/")  这个指令把coloumn 分成两个
+  unite(bmi_cc_clean, Country_ISO, Country, ISO, sep = "-")                   这个指令把coloumn 合并
+  
