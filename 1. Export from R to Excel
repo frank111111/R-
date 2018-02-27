@@ -4,6 +4,10 @@ therefore, we could only export the data as csv file and separate as “,” whi
 write.table(ppffd,file="wo.csv",sep = ",")
 
 #######################################################################################
+getwd()   显示 work director
+setwd()   设置work director
+
+#######################################################################################
 
 读入excel 主要是两个包：readxl, XLConnect
 
