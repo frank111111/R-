@@ -7,6 +7,8 @@ write.table(ppffd,file="wo.csv",sep = ",")
 getwd()   显示 work director
 setwd()   设置work director, Path 里面的"\"要换成"/"
 source(“ ”)  读取一个R文件
+
+http://rfunction.com/archives/1001
 #######################################################################################
 
 读入excel 主要是两个包：readxl, XLConnect
