@@ -27,3 +27,24 @@
   separate(bmi_cc, col = Country_ISO, into = c("Country", "ISO"), sep = "/")  这个指令把coloumn 分成两个
   unite(bmi_cc_clean, Country_ISO, Country, ISO, sep = "-")                   这个指令把coloumn 合并
   
+4. Lubridate Package.           将非时间形式coloumn 变成时间形式.
+                                dmy("12SEP2017")----> "12-09-2017"
+                                
+ 5. stringr package
+                                str_trim()   可以trim coloumn
+                                str_pad("24493", width = 7, side = "left", pad = "0") 用这个pad 指令可以增加string的宽度, 比如customer number 前面的leading zero 可以用这个方法增加
+                                [1] "0024493"
+                                nchar()      和excel len() 一样,查看string 的长度
+                                toupper()
+                                tolower()    upper and lower the charactor
+                                str_detect(vector,"value you want find")   找到你想要找的string, return 一个 TRUE,FALSE vector
+                                str_replace(vecot,"value you want find","value you want replace) 替换string
+ 6. FIND MISSING VALUE
+                                is.na() 得到和原来一样大小的table ,里面的数值变成TRUE,FALSE
+                                any(is.na()) 看看有没有TRUE 的，有TRUE的就return TRUE.
+                                table() 这个指令有意思
+                                na.omit()  把所有NA 的行都抹掉，包括其他coloumn 有data 但是就NA 那行是NA 的
+                                基本思想就是, missing value 的value is "", we replace all "" value with NA, then na.omit()
+                                
+ 7. Outlier
+                                
