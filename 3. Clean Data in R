@@ -42,6 +42,8 @@
                                 toupper()
                                 tolower()    upper and lower the charactor
                                 str_detect(vector,"value you want find")   找到你想要找的string, return 一个 TRUE,FALSE vector
+                                which(str_detect(vector,"value you want find")) 这个可以得到你要detect 的 value 的 index
+                                
                                 str_replace(vecot,"value you want find","value you want replace) 替换string
  6. FIND MISSING VALUE
                                 is.na() 得到和原来一样大小的table ,里面的数值变成TRUE,FALSE
