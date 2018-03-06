@@ -30,3 +30,9 @@ renameSheet(my_book,sheet=4,"summary")    从新命名一个sheet(sheet4), 为 "
 removeSheet(my_book,sheet="summary")     删除一个名为 "summary" 的 worksheet
 saveWorkbook(my_book,"summary.xlsx")     保存workbook，并从新命名为 summary.xlsx
 
+#########################################################################################
+读入 CSV
+
+用 data.table 这个包
+library(data.table)
+dt_food=fread("food.csv")                    fread 这个指令比read_csv 更能处理大量的数据
