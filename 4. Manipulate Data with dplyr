@@ -1,1 +1,6 @@
+dplyr
+
+mutate(df, z = x + y)                            在df这个database 里面,加入一个叫z的行,是由x+y 算出来的.
+mutate(my_df, x = a + b, y = x + c)              mutate 也可以一次进行多次加入coloumn
+
 
