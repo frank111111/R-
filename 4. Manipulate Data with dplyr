@@ -1,4 +1,42 @@
 dplyr
+########################################################################################################
+dplyr 相比 data.frame 确实好用得多
+首先要把dat.frame 变成 tbl 形式
+m= tbl_df("data.frame")                            变成tbl 形式以后,就可以用以下5大法则来做了
+
+lut()                                            有待研究
+
+#########################################################################################################
+There are 5 basic verbs used in dplyr:
+select()
+filter()
+arrange()
+mutate()
+summarise()
+#########################################################################################################
+select
+
+As an example, take the following call, that selects the variables var1 and var2 from the data frame df.
+
+select(df, var1, var2)
+
+You can also use : to select a range of variables and - to exclude some variables, 
+similar to indexing a data.frame with square brackets. You can use both variable's names as well as integer indexes. 
+This call selects the four first variables except for the second one of a data frame df:
+
+select(df, 1:4, -2)                                 选取前四个coloum,但是不选第二个coloum
+
+
+
+
+
+
+
+
+
+
+
+
 
 mutate(df, z = x + y)                            在df这个database 里面,加入一个叫z的行,是由x+y 算出来的.
 mutate(my_df, x = a + b, y = x + c)              mutate 也可以一次进行多次加入coloumn
