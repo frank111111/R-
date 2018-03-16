@@ -127,13 +127,26 @@ last(x) - The last element of vector x.
 nth(x, n) - The nth element of vector x.
 n() - The number of rows in the data.frame or group of observations that summarise() describes.
 n_distinct(x) - The number of unique values in vector x.
+
 Next to these dplyr-specific functions, you can also turn a logical test into an aggregating function with sum() or mean(). 
 A logical test returns a vector of TRUE's and FALSE's. When you apply sum() or mean() to such a vector, 
 R coerces each TRUE to a 1 and each FALSE to a 0. 
 sum() then represents the total number of observations that passed the test; 
 mean() represents the proportion.
 
+%%%%%%%%%%%%%%%%%%%%%%
+PIPE OPERATOR
+%%%%%%%%%
 
+%>%
+例子：
+
+hflights %>%
+  mutate(diff = TaxiOut - TaxiIn) %>%
+  filter(!is.na(diff)) %>%
+  summarise(avg = mean(diff))
+
+这个例子是对hflights 这个database 一次进行了多种运算，这样更方便，快速，不用再一次一次call 这个 database了
 
 
 
