@@ -148,6 +148,41 @@ hflights %>%
 
 这个例子是对hflights 这个database 一次进行了多种运算，这样更方便，快速，不用再一次一次call 这个 database了
 
+#########################################################################################################
+GROUP_BY 
+
+group_by    这个指令，只能在 %>% 这个指令下使用，而且和summarise 一起使用或者mutate，因为group_by 只有一个input 就是 coloumn 的名字
+
+
+这是代码:
+hflights %>%
+   group_by(UniqueCarrier) %>%
+   summarise(p_canc = mean(Cancelled == 1) * 100, 
+             avg_delay = mean(ArrDelay, na.rm = TRUE)) %>%
+   arrange(avg_delay, p_canc)
+   
+这是Output:
+   
+   UniqueCarrier     p_canc  avg_delay
+                <chr>      <dbl>      <dbl>
+1          US_Airways  1.1848341 -1.0721154
+2                Mesa 14.2857143 -0.8333333
+3            American  1.5873016 -0.1161290
+4             AirTran  0.8888889  0.7117117
+5              Alaska  0.0000000  1.0625000
+6            Frontier  0.0000000  4.0000000
+7             JetBlue  4.1666667  4.0000000
+8         Continental  0.7165377  6.0759329
+9  Atlantic_Southeast  3.0567686  6.2927928
+10             United  2.5773196  6.5925926
+11              Delta  2.0746888  7.1440678
+12          Southwest  1.6185477  7.5294903
+13         ExpressJet  1.5290102  7.6131367
+14     American_Eagle  1.8140590  7.8101852
+15            SkyWest  1.6059296  9.1620429
+
+
+GROUP_BY 这个function 还有很多需要学，没学会
 
 
 
