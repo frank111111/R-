@@ -1,1 +1,13 @@
+Plot
+
+这个plot 教学有点古怪
+plot(x,y,xlab="x vector name", ylab="y vector name")
+title("我曹")
+abline(a=,b=,)
+dot()
+
+par()
+
+
+plot(x,y,log="xy)  这样可以方便的plot 出来 x,y 的log 的图像
 
