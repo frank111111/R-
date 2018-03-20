@@ -47,6 +47,10 @@ mutate(my_df, x = a + b, y = x + c)              mutate 也可以一次进行多
 paste 可以和mutate 一起使用：
 c2=mutate(hflights,Date=paste(Year,Month,DayofMonth,sep="-"))
 
+这个mutate 还可以用在 ifelse 上面：
+email50 <- email50 %>%
+  mutate(num_char_cat = ifelse(num_char < med_num_char, "below median", "at or above median"))
+  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 FILTER
