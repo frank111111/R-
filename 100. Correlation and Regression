@@ -10,3 +10,5 @@
   Setting the use argument to "pairwise.complete.obs" allows cor() to compute the correlation coefficient for those observations 
   where the values of x and y are both not missing.
 
+3. 
+augment()       这个function 可以看所有的regression 的results
