@@ -12,18 +12,20 @@ In sample data
  sqrt(mean((database[y]-pp)^2))
  最后求出来的是rmse 但是是in sample 的，这个不合理，还要用out-of-sample 来做才行
  
- set.seed(32)   这相当于设定一个基准。
- r=sample(nrows(database))   把database 数据打乱
- databasenew=database[r,]    从新生成一个打乱的database
+ ##############################################
+ 先把data 打乱：
+  set.seed(32)   这相当于设定一个基准。
+  r=sample(nrows(database))   把database 数据打乱
+  databasenew=database[r,]    从新生成一个打乱的database
  
  然后把数据按照80% 和20% 分开
- split=round(nrow(diamonds)*0.8)
- train=diamonds[1:split,]
- test=diamonds[(split+1):nrow(diamonds),]
+  split=round(nrow(diamonds)*0.8)
+  train=diamonds[1:split,]
+  test=diamonds[(split+1):nrow(diamonds),]
  
  这是非常原始的做法
- model=lm(price~.,train)   用train 来train 一个model
- p=predict(model,test)     这里不明白为什么用test 来predict？？？？
+  model=lm(price~.,train)   用train 来train 一个model
+  p=predict(model,test)     这里不明白为什么用test 来predict？？？？
  
  
  
