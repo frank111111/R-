@@ -2,7 +2,9 @@ Data Scientist Tools Box:
 这节课主要讲supervised learning. regression 以及logistics regression 都是 suprvised learning， 他们都可以split dataset 
 into trainning dataset and test dataset. 也都可以用cross validation 来做。
 
-
+#####################################################
+Regression
+#####################################################
 
 Regression 这节课主要讲 如何用in sample 和 out sample 以及 如何 做 cross validation. 也挺有用的
 
@@ -12,7 +14,7 @@ In sample data
  sqrt(mean((database[y]-pp)^2))
  最后求出来的是rmse 但是是in sample 的，这个不合理，还要用out-of-sample 来做才行
  
- ##############################################
+
  先把data 打乱：
   set.seed(32)   这相当于设定一个基准。
   r=sample(nrows(database))   把database 数据打乱
@@ -28,6 +30,9 @@ In sample data
   p=predict(model,test)     这里不明白为什么用test 来predict？？？？
  
  
+ ###################################################
+ Logistic Regreesion
+ ###################################################
  
  
   
