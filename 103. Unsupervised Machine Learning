@@ -1,0 +1,10 @@
+###################
+K-Means Clustering
+###################
+
+kmeans(database,centers= "number of cluster we want",nstart="how many times we want the cluster to iterate?")
+
+用图像展示我们的cluster 成果：
+plot(x,col=km.out$cluster,main="k-means with 3 clusters",xlab="",ylab="")
+这里x 是cluster 之前的database, km.out 是cluster 之后的,所以用cluster 之后的来表示那些color.
+
