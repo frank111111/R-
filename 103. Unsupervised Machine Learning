@@ -8,3 +8,7 @@ kmeans(database,centers= "number of cluster we want",nstart="how many times we w
 plot(x,col=km.out$cluster,main="k-means with 3 clusters",xlab="",ylab="")
 这里x 是cluster 之前的database, km.out 是cluster 之后的,所以用cluster 之后的来表示那些color.
 
+kmeans 函数里面有一个条件叫: iter.max =10. 一般来说default iter.max 是等于10. 这表示kmeans 要run 10 遍来得到那个最优解. 可是, 现实生活中,
+       run 10 遍是不容易得到最优解的,一般要run 50 遍. 所以, 这个条件要设定出来.
+       
+       
