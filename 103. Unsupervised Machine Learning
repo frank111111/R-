@@ -12,3 +12,7 @@ kmeans 函数里面有一个条件叫: iter.max =10. 一般来说default iter.ma
        run 10 遍是不容易得到最优解的,一般要run 50 遍. 所以, 这个条件要设定出来.
        
        
+###################
+Hierarchical Clustering
+###################
+基本原理是，先把距离(可以是Euclidian距离),最近的两个点标成一个cluster, 再计算距离,再把
